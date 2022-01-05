@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><b>{{msg}}</b></p><br>
+<h1 align="center">Student Registration  </h1>
+<form action="/studentdetails/student_regi/" method="post">
+    {% csrf_token %}
+<b>name:</b><input type="name" name="name"><br>
+<b>email address:</b><input type="email" name="email"><br>
+    <b>mobile number:</b><input type="mobile number" name="mobile number"><br>
+    <b>department:</b><input type="department" name="department"><br>
+    <b>father name:</b><input type="father name" name="father name"><br>
+
+    <input type="submit" value="Register">
+</form><br>
+
+
+</body>
+
+</html>

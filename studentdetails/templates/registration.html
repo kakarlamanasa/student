@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student</title>
+</head>
+<body>
+{% if msg %}
+<h2><b>{{ msg }}</b></h2>
+{% endif %}
+{% if errors %}
+    {{errors}}
+{% endif %}
+<h3>Student Register</h3><br>
+
+    <form action="/app/student_regi/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<!--        {{ form.as_p }}-->
+    <input type="hidden" name="id" value="{{student.id}}"><br/><br/>
+    Student Name :  <input type="text" name="student_name" value="{{student.student_name}}"><br/><br/>
+    <p>Please select your Branch:</p>
+    ECE: <input type="radio" name="recipe_type" value="ECE">
+    EEE: <input type="radio" name="recipe_type" value="EEE"><br/><br/>
+        CSE: <input type="radio" name="recipe_type" value="CSE"><br/><br/>
+        MECH: <input type="radio" name="recipe_type" value="MECH"><br/><br/>
+        CIVIL: <input type="radio" name="recipe_type" value="CIVIL"><br/><br/>
+    Student father_name :<input type="text" name="father_name" value="{{student.father_name}}"><br/><br/>
+    Student mobile_number :<input type="text" name="mobile_number" value="{{Student.mobile_number}}"><br/><br/>
+        Student roll_number:<input type="text" name="roll_number" value="{{Student.roll_number}}"><br/><br/>
+        Student ssc_marks:<input type="text" name="ssc_marks" value="{{Student.ssc_marks}}"><br/><br/>
+    Student Image :<input type="file" name="student_image"><br/><br/>
+    <input type="submit" value="Submit">
+
+<br/><br/>
+</form>
+</body>
+</html>

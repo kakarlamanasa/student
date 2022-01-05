@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><b>{{msg}}</b></p><br>
+<form action="/studentdetails/savedetail/" method="POST">
+    {% csrf_token %}
+    Name:  <input type="text" name="Name" value="{{user.Name}}"><br/><br/>
+    SSC Marks:  <input type="text" name="ssc_marks" value="{{user.ssc_marks}}"><br/><br/>
+    Inter marks: <input type="text" name="inter_marks" value="{{user.inter_marks}}"><br/><br/>
+    Email:  <input type="text" name="email" value="{{user.email}}"><br/><br/>
+
+    Department: <input type="Department" name="Department" value="{{user.Department}}"><br/><br/>
+
+</form><br>
+
+
+</body>
+</html>
